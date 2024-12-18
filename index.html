@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <title>Deslocamento</title>
+</head>
+<body>
+  <h1>Deslocamento</h1>
+  
+  <label for="quilometragem">Quilometragem a ser percorrida (km):</label>
+  <input type="number" id="quilometragem" placeholder="km" />
+
+  <label for="contrato">
+    <input type="checkbox" id="contrato" onchange="atualizarValoresContrato()"/>Cliente sem contrato
+  </label>
+
+  <label for="valorPorKm">Valor por km (R$):</label>
+  <input type="number" id="valorPorKm" placeholder="Será preenchido automaticamente" step="0.01" readonly />
+
+  <button onclick="calcular()">Calcular</button>
+
+  <div id="resultado"></div>
+<script src="./script.js"></script>  
+</body>
+</html>
