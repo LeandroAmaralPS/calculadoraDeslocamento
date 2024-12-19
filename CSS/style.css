@@ -1,15 +1,27 @@
-    body {
+    body, html {
+      background-image: url(../IMG/Image.jpeg);
       font-family: Arial, sans-serif;
-      margin: 20px;
       text-align: center;
+      height: 100%;
+      width: 100%;
+      background-size: cover;
     }
+
+    body.img {
+      max-width: 200px;
+      max-height: 150px;
+      width: auto;
+      height: auto;
+    }
+
     label, input, select {
       display: flex;
       margin-bottom: 10px;
       margin-left: 45%;
       text-align: center;
-      
+
     }
+
     input[type="checkbox" i] {
       background-color: initial;
       cursor: default;
@@ -18,33 +30,36 @@
       margin: 3px 8px 3px 4px;
       padding: initial;
       border: initial;
-  }
+    }
+
     button {
       margin-top: 10px;
       padding: 10px 20px;
       text-align: center;
     }
+
     #resultado {
       margin-top: 20px;
       font-size: 18px;
       font-weight: bold;
       text-align: center;
-      margin-right: 45%;
+      margin-right: -2%;
     }
-    .desloc{
-      background-color: darkslategray;
+    .container{
+      display: flex;
+    }
+    .desloc {
+      background-color: transparent;
+      float: left;
+      border-style: solid;
+      border-color: red;
       width: 50%;
-      margin-right: 50%;
-      display: block;
     }
-    .valorPecas{
-      background-color: darkslategray;
+    #itensAdicionais {
+      background-color: transparent;
       float: right;
+      border-style: solid;
+      border-color: red;
       width: 50%;
-    }
-    #btnCalc{
-    margin-left: 9%;
-    }
-    #titleDesloc{
-      margin-right: 45%;
+
     }
