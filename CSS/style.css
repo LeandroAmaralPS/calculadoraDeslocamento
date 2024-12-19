@@ -51,15 +51,11 @@
     .desloc {
       background-color: transparent;
       float: left;
-      border-style: solid;
-      border-color: red;
       width: 50%;
     }
     #itensAdicionais {
       background-color: transparent;
       float: right;
-      border-style: solid;
-      border-color: red;
       width: 50%;
 
     }
