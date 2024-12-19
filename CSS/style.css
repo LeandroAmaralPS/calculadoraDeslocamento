@@ -8,11 +8,10 @@
       float: left;
     }
     .imgLogo{
-      float: left;
+      float: center;
     }
     .titleh1{
-      float: left;
-      margin-top: 100px;
+      float: center;
       margin-left: 10px;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
@@ -53,9 +52,6 @@
       font-weight: bold;
       text-align: center;
       margin-right: -2%;
-    }
-    .container{
-      display: flex;
     }
     .desloc {
       background-color: transparent;
