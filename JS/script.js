@@ -7,7 +7,7 @@
       const valorPorKmInput = document.getElementById('valorPorKm');
 
       if (contratoCheckbox.checked) {
-          valorPorKmInput.value = VALOR_SEM_CONTRATO.toFixed(2);
+          valorPorKmInput.value = VALOR_SEM_CONTRATO.toFixed(2);//(2)casa decimal após a virgula
     } else {
           valorPorKmInput.value = VALOR_COM_CONTRATO.toFixed(2);
       }
@@ -22,11 +22,11 @@
         document.getElementById('resultado').textContent = 'Por favor, insira valores válidos.';
         return;
       }
-
+      //campo onde gera o valor total
       const custoTotal = quilometragem * valorPorKm *2;
       document.getElementById('resultado').textContent = `Custo total: R$ ${custoTotal.toFixed(2)}`;
     }
 
-    // Configuração inicial
+    // config inicial linha 31 checkbox true deixa marcada, false desmarcada
     document.getElementById('contrato').checked = false;
     atualizarValoresContrato();
