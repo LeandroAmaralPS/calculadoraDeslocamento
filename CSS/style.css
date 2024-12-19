@@ -1,12 +1,21 @@
     body, html {
-      background-image: url(../IMG/Image.jpeg);
       font-family: Arial, sans-serif;
       text-align: center;
       height: 100%;
       width: 100%;
-      background-size: cover;
+      display: block;
+      background-color: aliceblue;
+      float: left;
     }
-
+    .imgLogo{
+      float: left;
+    }
+    .titleh1{
+      float: left;
+      margin-top: 100px;
+      margin-left: 10px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
     body.img {
       max-width: 200px;
       max-height: 150px;
@@ -50,12 +59,11 @@
     }
     .desloc {
       background-color: transparent;
-      float: left;
-      width: 50%;
+      font-size: 13px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
     #itensAdicionais {
       background-color: transparent;
-      float: right;
-      width: 50%;
-
+      font-size: 13px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
     }

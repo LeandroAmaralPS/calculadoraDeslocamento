@@ -1,6 +1,6 @@
     const VALOR_COM_CONTRATO = 2.00;
     const VALOR_SEM_CONTRATO = 2.50;
-    const PILHALACRE = 54.00;
+    /*const PILHALACRE = 54.00;
     const CANETA = 22.00;
     const CHAVE = 22.00;
     const DISPLAYREP = 275.00;
@@ -8,7 +8,7 @@
     const LEITORBIOMETRICO = 292.00;
     const IMPRESSORA = 690.00;
     const BOTOESPLACA = 45.00;
-    const NOBREAK = 238.00;
+    const NOBREAK = 238.00;*/
     let valorItensAdicionais = 0;
     // Atualiza o valor por km com base na checkbox
     function atualizarValoresContrato() {
@@ -47,15 +47,7 @@
         Custo de deslocamento: R$ ${custoDeslocamento.toFixed(2)}\n
         Custo de itens adicionais: R$ ${valorItensAdicionais.toFixed(2)}\n
         Custo total: R$ ${custoTotal.toFixed(2)}
-      `;
-      
-    }
-    function totaldePecas(){
-      const valortotaldepecas = PILHALACRE;
-      if (PILHALACRE.checked) {
-        document.getElementById('totalPecas').textContent = `Total de peças: R$ ${valortotaldepecas}`;
-        return;
-      }
+      `;      
     }
     // config inicial linha 31 checkbox true deixa marcada, false desmarcada
     document.getElementById('contrato').checked = false;
