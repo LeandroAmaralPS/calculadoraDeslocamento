@@ -9,17 +9,14 @@
     }
 
     * {
-      color: #07166f;
+      color: black;
       font-size: 11px;
       font-family: Montserrat;
     }
 
     body,
     html {
-      min-height: 100%;
-      min-width: 100%;
-      max-height: 100%;
-      max-width: 100%;
+
       text-align: center;
       height: 100%;
       width: 100%;
@@ -103,8 +100,6 @@
       to {
         opacity: 1;
       }
-
-      /* Padrão */
     }
 
     @-moz-keyframes fadein {
@@ -115,8 +110,6 @@
       to {
         opacity: 1;
       }
-
-      /* Firefox */
     }
 
     @-webkit-keyframes fadein {
@@ -127,8 +120,6 @@
       to {
         opacity: 1;
       }
-
-      /* Webkit */
     }
 
     @-ms-keyframes fadein {
@@ -139,6 +130,14 @@
       to {
         opacity: 1;
       }
+    }
 
-      /* IE */
+    input[type=number]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+
+    }
+
+    input[type=number] {
+      -moz-appearance: textfield;
+      appearance: textfield;
     }
