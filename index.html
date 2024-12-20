@@ -26,8 +26,8 @@
 
       <label for="valorPorKm">Valor por km (R$):</label>
       <input type="number" id="valorPorKm" placeholder="Será preenchido automaticamente" step="0.01" readonly />
+      <div id="itensAdicionais">
     </div>
-    <div id="itensAdicionais">
       <h1>Itens adicionais</h1>
       <label><input type="checkbox" value="54.00" onchange="atualizarItens()" /> Pilha Lacre (R$ 54.00)</label>
       <label><input type="checkbox" value="22.00" onchange="atualizarItens()" /> Caneta (R$ 22.00)</label>
@@ -40,9 +40,9 @@
       <label><input type="checkbox" value="238.00" onchange="atualizarItens()" /> Nobreak (R$ 238.00)</label>
       <label><input type="checkbox" value="200.00" onchange="atualizarItens()" />Hora técnica sem Contrato (R$200.00)</label>
     </div>
+    <button onclick="calcular()" id="btnCalc">Calcular</button>
+    <div id="resultado"></div>
   </div>
-  <button onclick="calcular()" id="btnCalc">Calcular</button>
-  <div id="resultado"></div>
   <footer>
     <script src="./JS/script.js"></script>
   </footer>
