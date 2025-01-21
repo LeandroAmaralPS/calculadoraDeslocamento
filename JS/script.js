@@ -36,18 +36,22 @@
     function calcular() {
       const quilometragem = parseFloat(document.getElementById('quilometragem').value);
       const valorPorKm = parseFloat(document.getElementById('valorPorKm').value);      
+      
       if (isNaN(quilometragem) || isNaN(valorPorKm) || quilometragem <= 0) {
         document.getElementById('resultado').textContent = 'Por favor, insira valores válidos.';
         return;
       }
-      //campo onde gera o valor total
-      const custoDeslocamento = quilometragem * valorPorKm*2;
+    
+      // Calcula os custos
+      const custoDeslocamento = quilometragem * valorPorKm * 2;
       const custoTotal = custoDeslocamento + valorItensAdicionais;
-      document.getElementById('resultado').textContent = `
-        Custo de deslocamento: R$ ${custoDeslocamento.toFixed(2)}\n
-        Custo de itens adicionais: R$ ${valorItensAdicionais.toFixed(2)}\n
-        Custo total: R$ ${custoTotal.toFixed(2)}
-      `;      
+    
+      // Atualiza o conteúdo do resultado com elementos HTML
+      document.getElementById('resultado').innerHTML = `
+        <p><strong>Custo de deslocamento:</strong> R$ ${custoDeslocamento.toFixed(2)}</p>
+        <p><strong>Custo de itens adicionais:</strong> R$ ${valorItensAdicionais.toFixed(2)}</p>
+        <p><strong>Custo total:</strong> R$ ${custoTotal.toFixed(2)}</p>
+      `;
     }
     // config inicial linha 31 checkbox true deixa marcada, false desmarcada
     document.getElementById('contrato').checked = false;
