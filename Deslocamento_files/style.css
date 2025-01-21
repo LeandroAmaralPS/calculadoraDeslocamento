@@ -76,12 +76,12 @@ input[type="checkbox" i] {
 }
 
 button {
-  margin-bottom: 5px;
   padding: 10px 20px;
   text-align: center;
 }
 
 #resultado {
+  padding: 12px;
   font-size: 18px;
   font-weight: bold;
   text-align: center;
