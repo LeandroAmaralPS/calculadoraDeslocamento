@@ -22,13 +22,13 @@ html {
 
 .imgLogo {
   float: center;
-  height: 100px;
+  height: 75px;
 }
 
 .titleh1 {
   float: center;
   margin-left: 10px;
-  font-size: 30px;
+  font-size: 20px;
   margin-top: 0px;
 }
 
@@ -67,7 +67,12 @@ button {
   padding: 10px 20px;
   text-align: center;
 }
-
+#quantidadeMetrosCabo{
+  margin-left: 10px;
+}
+.iAdc{
+  margin-bottom: 10px;
+}
 #resultado {
   font-size: 18px;
   font-weight: bold;
@@ -75,15 +80,21 @@ button {
   margin-right: -2%;
   color: black;
 }
-
+.cbRede{
+  margin-bottom: -7px;
+}
 .desloc {
   background-color: transparent;
   font-size: 10px;
 }
-
+#titleDesloc{
+  margin-top: 5px;
+  margin-bottom: 2px;
+}
 #itensAdicionais {
   background-color: transparent;
   font-size: 10px;
+  margin-bottom: 10px;
 }
 
 /*fade da tela*/

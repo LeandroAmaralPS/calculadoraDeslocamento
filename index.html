@@ -9,7 +9,7 @@
   <link rel="icon" type="image/x-icon" href="./IMG/copo tam.pdf (1).png">  
   <title>Deslocamento</title>
   <img class="imgLogo" src="./IMG/copo tam.pdf (1).png" alt="logo da empresa">
-  <h1 class="titleh1">Calculadora de deslocamento</h1>
+  <h1 class="titleh1">Calculadora de valores (deslocamento e peças)</h1>
 </head>
 
 <body>
@@ -28,21 +28,17 @@
       <input type="number" id="valorPorKm" placeholder="Será preenchido automaticamente" step="0.01" readonly />
     </div>
     <div id="itensAdicionais">
-      <h1>Itens adicionais</h1>
-      <label><input type="checkbox" value="54.00" onchange="atualizarItens()" /> Pilha Lacre (R$ 54.00)</label>
-      <label><input type="checkbox" value="22.00" onchange="atualizarItens()" /> Caneta (R$ 22.00)</label>
-      <label><input type="checkbox" value="22.00" onchange="atualizarItens()" /> Chave (R$ 22.00)</label>
-      <label><input type="checkbox" value="275.00" onchange="atualizarItens()" /> Display REP (R$ 275.00)</label>
-      <label><input type="checkbox" value="162.00" onchange="atualizarItens()" /> Fonte (R$ 162.00)</label>
-      <label><input type="checkbox" value="292.00" onchange="atualizarItens()" /> Leitor Biométrico (R$ 292.00)</label>
-      <label><input type="checkbox" value="690.00" onchange="atualizarItens()" /> Impressora (R$ 690.00)</label>
-      <label><input type="checkbox" value="45.00" onchange="atualizarItens()" /> Botões Placa (R$ 45.00)</label>
-      <label><input type="checkbox" value="238.00" onchange="atualizarItens()" /> Nobreak (R$ 238.00)</label>
-      <label><input type="checkbox" value="200.00" onchange="atualizarItens()" />Hora técnica sem Contrato (R$200.00)</label>
+      <h1 class="iAdc">Itens adicionais</h1>    
+      <!--Cabo de Rede -->
+      <label for="caboRede" class="cbRede">
+        <input type="checkbox" id="caboRede" value="caboRede" onchange="atualizarItens()" /> Cabo de Rede/Energia (R$ 8.00 por metro)
+        <input type="number" id="quantidadeMetrosCabo" placeholder="Quantidade de metros" onchange="atualizarItens()" />
+      </label><br>    
     </div>
     <button onclick="calcular()" id="btnCalc">Calcular</button>
     <div id="resultado"></div>
   </div>
   <script src="./JS/script.js"></script>
+  <script src="./JS/valores.js"></script>
 </body>
 </html>
