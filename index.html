@@ -11,9 +11,18 @@
   <img class="imgLogo" src="./IMG/copo tam.pdf (1).png" alt="logo da empresa">
   <h1 class="titleh1">Calculadora de valores (deslocamento e peças)</h1>
 </head>
-
 <body>
-  <!--<img src="./IMG/1674844021893.jpg" alt="imagem">-->
+  <div class="maps">
+    <label class="enderecos">Endereços</label>
+    <input type="text" id="pontoA" placeholder="Endereço de origem" />
+    <br />
+    <input type="text" id="pontoB" placeholder="Endereço de destino" />
+    <br />
+    <button id="botaoGerar" onclick="redirMaps()">Mostrar rota no Google Maps</button>
+    <a id="linkMapa" href="#" target="_blank" style="display: none;">    
+      <!-- imagem do logo do google se necessário atualizar alterar na pasta img-->
+      <img src="./IMG/maps.png" style="width: 100px;">
+    </a>
   <div class="container">
     <div class="desloc">
       <h1 id="titleDesloc">Valor de deslocamento</h1>
@@ -32,7 +41,7 @@
       <!--Cabo de Rede -->
       <label for="caboRede" class="cbRede">
         <input type="checkbox" id="caboRede" value="caboRede" onchange="atualizarItens()" /> Cabo de Rede/Energia (R$ 8.00 por metro)
-        <input type="number" id="quantidadeMetrosCabo" placeholder="Quantidade de metros" onchange="atualizarItens()" />
+        <input type="number" id="quantidadeMetrosCabo" placeholder="Metros" onchange="atualizarItens()" />
       </label><br>    
     </div>
     <button onclick="calcular()" id="btnCalc">Calcular</button>
@@ -40,5 +49,6 @@
   </div>
   <script src="./JS/script.js"></script>
   <script src="./JS/valores.js"></script>
+  <script src="./JS/maps.js"></script>
 </body>
 </html>

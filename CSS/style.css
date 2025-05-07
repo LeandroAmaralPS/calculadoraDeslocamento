@@ -1,8 +1,14 @@
 * {
-  color: black;
+  color: #1c003b;
   font-size: 11px;
   margin-top: -1px;
   margin-bottom: -2px;
+}
+
+.enderecos{
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 47%;
 }
 p, strong{
   font-size: 14px;
@@ -17,7 +23,7 @@ html {
   display: block;
   float: left;
   animation: fadein 2s;
-  background-image: repeating-linear-gradient(#ffffff, #07166f);
+  background-image: repeating-linear-gradient(#d7d9dc);
 }
 
 .imgLogo {
@@ -30,6 +36,7 @@ html {
   margin-left: 10px;
   font-size: 20px;
   margin-top: 0px;
+  color: #1c003b;
 }
 
 .kmPercorrido{
