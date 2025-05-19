@@ -14,13 +14,14 @@ document.addEventListener("DOMContentLoaded", function () {
             { valor: "45.00", descricao: "Botões Placa (R$ 45.00)" },
             { valor: "238.00", descricao: "Nobreak (R$ 238.00)" },
             { valor: "200.00", descricao: "Hora técnica sem Contrato (R$200.00)" },
+            { valor: "250.00", descricao: "Visita técnica sem Contrato (R$250.00)" },
       ];     
       // Laço para criar e adicionar cada checkbox e label na div
       itens.forEach(item => {
-            // Cria o elemento <label>
+            // Cria o <label>
             const label = document.createElement("label");
 
-            // Cria o elemento <input> do tipo checkbox
+            // Cria o <input> do tipo checkbox
             const checkbox = document.createElement("input");
             checkbox.type = "checkbox";
             checkbox.value = item.valor;
