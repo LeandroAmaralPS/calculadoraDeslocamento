@@ -14,11 +14,14 @@
 <body>
   <div class="maps">
     <label class="enderecos">Endereços</label>
-    <input type="text" id="pontoA" placeholder="Endereço de origem" />
-    <br />
+<input type="text" id="pontoA" placeholder="Endereço de origem" />
+<button type="button" onclick="usarMinhaLocalizacao()">Usar minha localização</button>
+<button id="botaoGerarFixo" onclick="redirMapsOrigemFixa()">Endereço Símix</button>
+<br />
     <input type="text" id="pontoB" placeholder="Endereço de destino" />
     <br />
     <button id="botaoGerar" onclick="redirMaps()">Mostrar rota no Google Maps</button>
+    
     <a id="linkMapa" href="#" target="_blank" style="display: none;">    
       <!-- imagem do logo do google se necessário atualizar alterar na pasta img-->
       <img src="./IMG/maps.png" style="width: 100px;">

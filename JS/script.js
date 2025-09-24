@@ -32,7 +32,6 @@ function atualizarItens() {
         }
     });
 }
-
 // Calcula o custo total
 function calcular() {
     const quilometragem = parseFloat(document.getElementById('quilometragem').value);
@@ -51,8 +50,7 @@ function calcular() {
     document.getElementById('resultado').innerHTML = `
         <p><strong>Custo de deslocamento:</strong> R$ ${custoDeslocamento.toFixed(2)}</p>
         <p><strong>Custo de itens adicionais:</strong> R$ ${valorItensAdicionais.toFixed(2)}</p>
-        <p><strong>Custo total:</strong> R$ ${custoTotal.toFixed(2)}</p>
-    `;
+        <p><strong>Custo total:</strong> R$ ${custoTotal.toFixed(2)}</p>`;
 }
 
 // Configuração inicial
