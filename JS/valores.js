@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
       // Array de itens e valores
       const itens = [
             { valor: "10.90", descricao: "RJ45 (R$ 10.90)"},
-            { valor: "54.00", descricao: "Pilha Lacre (R$ 54.00)" },
+            { valor: "54.00", descricao: "Pilha + Lacre (R$ 54.00)" },
+            { valor: "27.00", descricao: "Lacre (R$ 27.00)" },
             { valor: "22.00", descricao: "Caneta (R$ 22.00)" },
             { valor: "22.00", descricao: "Chave (R$ 22.00)" },
             { valor: "275.00", descricao: "Display REP (R$ 275.00)" },
