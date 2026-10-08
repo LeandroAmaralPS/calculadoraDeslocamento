@@ -16,6 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
             { valor: "238.00", descricao: "Nobreak (R$ 238.00)" },
             { valor: "200.00", descricao: "Hora técnica sem Contrato (R$200.00)" },
             { valor: "250.00", descricao: "Visita técnica sem Contrato (R$250.00)" },
+            { valor: "80.00", descricao: "Modificação de REP de local/reinstalação (R$80.00)" },
+            { valor: "80.00", descricao: "Configuração/comunicação de rede (R$80.00)" },
+            { valor: "50.00", descricao: "Limpeza de REP / solda (R$50.00)" },
       ];     
       // Laço para criar e adicionar cada checkbox e label na div
       itens.forEach(item => {
