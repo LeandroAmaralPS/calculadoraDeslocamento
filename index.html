@@ -4,54 +4,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="./CSS/style.css">
   <link rel="stylesheet" type="text/css" href="./CSS/reset.css">
-  <link rel="icon" type="image/x-icon" href="./IMG/copo tam.pdf (1).png">  
+  <link rel="stylesheet" type="text/css" href="./CSS/style.css">
+  <link rel="icon" type="image/x-icon" href="./IMG/copo tam.pdf (1).png">
   <title>Deslocamento</title>
-  <img class="imgLogo" src="./IMG/copo tam.pdf (1).png" alt="logo da empresa">
-  <h1 class="titleh1">Calculadora de valores (deslocamento e peças)</h1>
 </head>
+
 <body>
-  <div class="maps">
-    <label class="enderecos">Endereços</label>
-<input type="text" id="pontoA" placeholder="Endereço de origem" />
-<button type="button" onclick="usarMinhaLocalizacao()">Usar minha localização</button>
-<button id="botaoGerarFixo" onclick="redirMapsOrigemFixa()">Endereço Símix</button>
-<br />
-    <input type="text" id="pontoB" placeholder="Endereço de destino" />
-    <br />
-    <button id="botaoGerar" onclick="redirMaps()">Mostrar rota no Google Maps</button>
-    
-    <a id="linkMapa" href="#" target="_blank" style="display: none;">    
-      <!-- imagem do logo do google se necessário atualizar alterar na pasta img-->
-      <img src="./IMG/maps.png" style="width: 100px;">
-    </a>
-  <div class="container">
-    <div class="desloc">
-      <h1 id="titleDesloc">Valor de deslocamento</h1>
-      <label for="quilometragem" id="kmPercorrido">Quilometragem a ser percorrida (km):</label>
-      <input type="number" id="quilometragem" placeholder="km" />
+  <main class="app">
 
-      <label for="contrato">
-        <input type="checkbox" id="contrato" onchange="atualizarValoresContrato()" />Cliente sem contrato
-      </label>
+    <header class="topo">
+      <img class="imgLogo" src="./IMG/copo tam.pdf (1).png" alt="logo da empresa">
+      <div>
+        <h1 class="titleh1">Calculadora de valores</h1>
+        <p class="subtitulo">Deslocamento e peças</p>
+      </div>
+    </header>
 
-      <label for="valorPorKm">Valor por km (R$):</label>
-      <input type="number" id="valorPorKm" placeholder="Será preenchido automaticamente" step="0.01" readonly />
+    <section class="painel maps">
+      <h2>Endereços</h2>
+
+      <div class="campo">
+        <label for="pontoA">Origem</label>
+        <input type="text" id="pontoA" placeholder="Endereço de origem" />
+      </div>
+
+      <div class="acoes">
+        <button type="button" onclick="usarMinhaLocalizacao()">Usar minha localização</button>
+        <button type="button" id="botaoGerarFixo" onclick="redirMapsOrigemFixa()">Endereço Símix</button>
+      </div>
+
+      <div class="campo">
+        <label for="pontoB">Destino</label>
+        <input type="text" id="pontoB" placeholder="Endereço de destino" />
+      </div>
+
+      <button type="button" id="botaoGerar" onclick="redirMaps()">Mostrar rota no Google Maps</button>
+
+      <a id="linkMapa" href="#" target="_blank" style="display: none;">
+        <!-- imagem do logo do google se necessário atualizar alterar na pasta img-->
+        <img src="./IMG/maps.png" style="width: 100px;">
+      </a>
+    </section>
+
+    <div class="container">
+
+      <section class="painel desloc">
+        <h2 id="titleDesloc">Valor de deslocamento</h2>
+
+        <div class="linha-km">
+          <div class="campo">
+            <label for="quilometragem" id="kmPercorrido">Quilometragem (km)</label>
+            <input type="number" id="quilometragem" placeholder="km" />
+          </div>
+
+          <div class="campo">
+            <label for="valorPorKm">Valor por km (R$)</label>
+            <input type="number" id="valorPorKm" placeholder="Preenchido automaticamente" step="0.01" readonly />
+          </div>
+        </div>
+
+        <label for="contrato" class="switch">
+          <input type="checkbox" id="contrato" onchange="atualizarValoresContrato()" />
+          Cliente sem contrato
+        </label>
+      </section>
+
+      <section class="painel">
+        <h2 class="iAdc">Itens adicionais</h2>
+        <div id="itensAdicionais">
+          <!-- Cabo de Rede -->
+          <label for="caboRede" class="item-cabo">
+            <input type="checkbox" id="caboRede" value="caboRede" onchange="atualizarItens()" />
+            Cabo de Rede/Energia (R$ 8.00 por metro)
+            <input type="number" id="quantidadeMetrosCabo" placeholder="Metros" oninput="atualizarItens()" />
+          </label>
+          <!-- os demais itens são criados pelo JS aqui dentro -->
+        </div>
+      </section>
+
+      <button type="button" onclick="calcular()" id="btnCalc">Calcular</button>
+      <div id="resultado"></div>
+
     </div>
-    <div id="itensAdicionais">
-      <h1 class="iAdc">Itens adicionais</h1>    
-      <!--Cabo de Rede -->
-      <label for="caboRede" class="cbRede">
-        <input type="checkbox" id="caboRede" value="caboRede" onchange="atualizarItens()" /> Cabo de Rede/Energia (R$ 8.00 por metro)
-        <input type="number" id="quantidadeMetrosCabo" placeholder="Metros" onchange="atualizarItens()" />
-      </label><br>    
-    </div>
-    <button onclick="calcular()" id="btnCalc">Calcular</button>
-    <div id="resultado"></div>
-  </div>
+  </main>
+
   <script src="./JS/script.js"></script>
   <script src="./JS/valores.js"></script>
   <script src="./JS/maps.js"></script>
 </body>
+
 </html>

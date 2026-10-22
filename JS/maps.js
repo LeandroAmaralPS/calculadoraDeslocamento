@@ -46,7 +46,7 @@ function redirMaps() {
 
   const linkMapa = document.getElementById("linkMapa");
   linkMapa.href = url;
-  linkMapa.style.display = "inline-block";
+  linkMapa.style.display = "flex";
 
 // Oculta o botão "Mostrar rota"
   document.getElementById("botaoGerar").style.display = "none";
